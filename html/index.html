@@ -3,10 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <title>Bit Clickr</title>
-    <script src="../src/simpleGame.js"></script>
-    <script src="../src/clickr.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   </head>
   <body onload="init()">
-    <p id="bitCounter"></p>
+    <div>
+      <h1 style="padding-left: 1%; font-size: 50px; font-style: bold; color: green; font-family: 'Roboto Mono', monospace; "id="bitCounter"></p>
+      <h1 style="padding-left: 1.2%; font-size: 15px; font-style: bold; font-family: 'Roboto Mono', monospace;">Bit Rate: <span id='bitRate'></span></p>    
+    </div>
+    
+    <div style="float:right; width: 50%;">
+      <div>
+        <img style="float: left; padding-bottom: 100px; padding-right: 20px;" src="../img/bitcursor.png" height="60px" width="100px">
+        <h2 style="font-weight: bold; font-family: 'Roboto Mono', monospace;">Bit Clicker <span id="owned-bit-clickers">(0)</span></h2>
+        <p style="color: green" id="clicker-cost">Cost: 15 bits</p>
+        <p style="color: rgb(0, 102, 255)">Bit Rate: .1 bit/s</p>
+        <button onclick="addBitClicker()">Buy Bit Clicker</button>
+      </div>
+      <div>
+        <img style="float: left;  padding-bottom: 100px; padding-right: 20px;" src="../img/bitchomper.png" height="60px" width="100px">
+        <h2 style="font-weight: bold; font-family: 'Roboto Mono', monospace;">Bit Chomper <span id="owned-bit-chompers">(0)</span></h2>
+        <p style="color: green" id="chomper-cost">Cost: 100 bits  </p>
+        <p style="color: rgb(0, 102, 255)">Bit Rate: 1 bit/s</p>
+        <button onclick="addBitChomper()">Buy Bit Chomper</button>
+      </div>
+      <div>
+        <img style="float: left;  padding-bottom: 100px; padding-right: 20px;" src="../img/bitpayload.png" height="60px" width="100px">
+        <h2 style="font-weight: bold; font-family: 'Roboto Mono', monospace;">Bit Payload <span id="owned-bit-payloads">(0)</span></h2>
+        <p style="color: green" id="payload-cost">Cost: 1000 bits  </p>
+        <p style="color: rgb(0, 102, 255)">Bit Rate: 8 bit/s</p> 
+        <button onclick="addBitPayload()">Buy Bit Payload</button>
+        
+      </div>
+      <div>
+        <img style="float: left;  padding-bottom: 100px; padding-right: 20px; " src="../img/bitminer.png" height="60px" width="100px">
+        <h2 style="font-weight: bold; font-family: 'Roboto Mono', monospace;">Bit Miner <span id="owned-bit-miners">(0)</span></h2>
+        <p style="color: green" id="miner-cost">Cost: 10000 bits</p>
+        <p style="color: rgb(0, 102, 255)">Bit Rate: 42 bit/s</p> 
+        <button onclick="addBitMiner()">Buy Bit Miner</button>
+        
+      </div>
+
+      <div style="float:left; width: 100%;">
+          <h2 style="font-weight: bold; font-family: 'Roboto Mono', monospace;">Buyable Ending</h2>
+          <p style="color: green" id="miner-cost">Cost: 50000 bits</p>
+          <button onclick="winGame()">Win the game!</button>
+      </div>
+
+    </div>
+    
+    
   </body>
+
+  <script src="../src/simpleGame.js"></script>
+  <script src="../src/clickr.js"></script>
 </html>
